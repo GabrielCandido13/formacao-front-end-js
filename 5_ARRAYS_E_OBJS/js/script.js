@@ -125,3 +125,46 @@ console.log(letters);
 letters.unshift("q", "r", "s");
 letters.unshift("z");
 console.log(letters);
+
+// 13 - indexOf e lastIndexOf
+const myElements = ["Morango", "Maça", "Abacate", "Pêra", "Abacate"];
+
+console.log(myElements.indexOf("Maça"));
+console.log(myElements.indexOf("Abacate"));
+
+console.log(myElements[2]);
+console.log(myElements[myElements.indexOf("Abacate")]);
+
+console.log(myElements.lastIndexOf("Abacate"));
+
+console.log(myElements.indexOf("Banana"));
+console.log(myElements.lastIndexOf("Mamão"));
+
+// 14 - Slice
+const testeSlice = ["a", "b", "c", "d", "e", "f"];
+
+const subArray = testeSlice.slice(2, 4);
+console.log(subArray);
+
+const subArray2 = testeSlice.slice(2, 4+1);
+console.log(subArray2);
+
+const subArray3 = testeSlice.slice(2);
+console.log(subArray3);
+
+// 15 - Foreach
+const nums = [1, 2, 3, 4, 5];
+
+nums.forEach((numero) => {
+    console.log(`O número é ${numero}`);
+})
+
+const posts = [
+    {title: "Primero post", category: "PHP"},
+    {title: "Segundo post", category: "Java"},
+    {title: "Terceiro post", category: "Python"}
+];
+
+posts.forEach((post) => {
+    console.log(`Exibindo ${post.title} da categoria ${post.category}.`);
+})
