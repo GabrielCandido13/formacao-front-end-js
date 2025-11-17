@@ -168,3 +168,58 @@ const posts = [
 posts.forEach((post) => {
     console.log(`Exibindo ${post.title} da categoria ${post.category}.`);
 })
+
+// 16 - Includes
+const brands = ["BMW", "Ferrari", "Lamborghini", "Ford"];
+
+console.log(brands.includes("BMW"));
+console.log(brands.includes("Fiat"));
+
+if(brands.includes("BMW")) {
+    console.log("Há carros da marca BMW!")
+}
+
+// 17 - Reverse
+const reverseTest = [1, 2, 3, 4, 5];
+
+reverseTest.reverse();
+console.log(reverseTest);
+
+// 18 - Trim
+const trimTest = "   testando \n   ";
+
+console.log(trimTest);
+console.log(trimTest.trim());
+
+console.log(trimTest.length);
+console.log(trimTest.trim().length);
+
+// 19 - Padstart
+const testePadStart = "1"; 
+
+const newNumber = testePadStart.padStart(4, "0");
+
+console.log(testePadStart);
+console.log(newNumber);
+
+const testePadEnd = newNumber.padEnd(10, "0");
+
+console.log(testePadEnd);
+
+// 20 - Split
+const frase = "O rato roeu a roupa do rei de Roma";
+
+const arrayDaFrase = frase.split(" ");
+
+console.log(arrayDaFrase);
+for(let i = 0; i < arrayDaFrase.length; i++){
+    console.log(arrayDaFrase[i]);
+}
+
+// 21 - Join
+const fraseDenovo = arrayDaFrase.join(" ");
+console.log(fraseDenovo);
+
+const itemsParaCompra = ["Mouse", "Teclado", "Navaja Crimson Web"];
+const fraseDeCompra = `Precisaremos comprar no fim do mês: ${itemsParaCompra.join(", ")}.`;
+console.log(fraseDeCompra);
