@@ -223,3 +223,57 @@ console.log(fraseDenovo);
 const itemsParaCompra = ["Mouse", "Teclado", "Navaja Crimson Web"];
 const fraseDeCompra = `Precisaremos comprar no fim do mês: ${itemsParaCompra.join(", ")}.`;
 console.log(fraseDeCompra);
+
+// 22 - Repeat
+const palavra = "Testando ";
+
+console.log(palavra.repeat(5));
+
+// 23 - Rest operator
+const somaInfinita = (...args) => {
+    let soma = 0;
+    for(let i = 0; i < args.length; i++) {
+        soma += args[i];
+    }
+
+    return soma;
+};
+
+console.log(somaInfinita(1, 2, 3));
+console.log(somaInfinita(2, 30000, 40000, 50000, 232030220, 20302023));
+
+// 24 - For of
+const somaInfinita2 = (...args) => {
+    let soma = 0;
+
+    for(num of args) {
+        soma += num;
+    }
+    return soma;
+};
+
+console.log(somaInfinita2(2, 4, 5, 6, 7, 8, 9, 10));
+
+// 25 - Destructuring em objetos
+const userDetais = {
+    firstName: "Gabriel",
+    lastName: "Candido",
+    job: "IT Support"
+};
+
+const { firstName, lastName, job} = userDetais;
+console.log(firstName, lastName, job);
+
+// Renomear variáveis
+const {firstName: primeiroNome } = userDetais;
+console.log(primeiroNome);
+
+// 26 - Destructuring em arrays
+const myList = ["Avião", "Submarino", "Carro"];
+
+const veiculos = [veiculoA, veiculoB, veiculoC] = myList;
+console.log(veiculoA, veiculoB, veiculoC);
+
+// 27 - JSON
+const myJson = '{"name": "Gabriel", "age": 22, "skills": ["PHP", "React"]}';
+console.log(myJson);
